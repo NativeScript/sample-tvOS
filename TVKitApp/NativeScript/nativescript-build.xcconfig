@@ -1,0 +1,2 @@
+HEADER_SEARCH_PATHS = $(inherited) $(SRCROOT)/NativeScript/include
+OTHER_LDFLAGS = $(inherited) -sectcreate __DATA __TNSMetadata $(SRCROOT)/NativeScript/metadata.bin -L$(SRCROOT)/NativeScript/lib -lNativeScript -lJavaScriptCore -lWTF -lffi -lbmalloc -licucore -lz -lc++ -framework MobileCoreServices -framework UIKit -framework CoreGraphics

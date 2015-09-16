@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		CDF3CA5A1BA999A0005BED2C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF3CA591BA999A0005BED2C /* main.m */; };
+		CDF3CA951BA9A90A005BED2C /* app in Resources */ = {isa = PBXBuildFile; fileRef = CDF3CA941BA9A90A005BED2C /* app */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CDF3CA551BA999A0005BED2C /* TVKitApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVKitApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDF3CA591BA999A0005BED2C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CDF3CA661BA999A0005BED2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDF3CA8D1BA9A3B6005BED2C /* nativescript-build.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "nativescript-build.xcconfig"; path = "NativeScript/nativescript-build.xcconfig"; sourceTree = SOURCE_ROOT; };
+		CDF3CA941BA9A90A005BED2C /* app */ = {isa = PBXFileReference; lastKnownFileType = folder; path = app; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +49,7 @@
 		CDF3CA571BA999A0005BED2C /* TVKitApp */ = {
 			isa = PBXGroup;
 			children = (
+				CDF3CA941BA9A90A005BED2C /* app */,
 				CDF3CA661BA999A0005BED2C /* Info.plist */,
 				CDF3CA581BA999A0005BED2C /* Supporting Files */,
 			);
@@ -55,6 +59,7 @@
 		CDF3CA581BA999A0005BED2C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CDF3CA8D1BA9A3B6005BED2C /* nativescript-build.xcconfig */,
 				CDF3CA591BA999A0005BED2C /* main.m */,
 			);
 			name = "Supporting Files";
@@ -117,6 +122,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDF3CA951BA9A90A005BED2C /* app in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +142,7 @@
 /* Begin XCBuildConfiguration section */
 		CDF3CA671BA999A0005BED2C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDF3CA8D1BA9A3B6005BED2C /* nativescript-build.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -179,6 +186,7 @@
 		};
 		CDF3CA681BA999A0005BED2C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDF3CA8D1BA9A3B6005BED2C /* nativescript-build.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";

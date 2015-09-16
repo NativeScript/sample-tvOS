@@ -6,10 +6,23 @@
 //  Copyright © 2015 Telerik. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "NativeScript.h"
 
-int main(int argc, char * argv[]) {
+extern char metadataPtr __asm("section$start$__DATA$__TNSMetadata");
+
+int main(int argc, char *argv[]) {
     @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, nil);
+        NSString *applicationPath = [NSBundle mainBundle].bundlePath;
+
+        [TNSRuntime initializeMetadata:&metadataPtr];
+        TNSRuntime *runtime = [[TNSRuntime alloc] initWithApplicationPath:applicationPath];
+
+#ifndef NDEBUG
+        TNSRuntimeInspector.logsToSystemConsole = YES;
+#endif
+
+        [runtime executeModule:@"./"];
+
+        return 0;
     }
 }
